@@ -1,0 +1,19 @@
+[project]
+name = "console-todo-app"
+version = "0.1.0"
+description = "Console-based In-Memory Todo Application"
+authors = [
+    {name = "Developer", email = "dev@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Using standard library as per plan.md
+    # No additional dependencies needed
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
