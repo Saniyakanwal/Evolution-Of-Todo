@@ -1,0 +1,5 @@
+# Dependencies for Console-based In-Memory Todo Application
+# Using standard library dependencies as specified in plan.md
+
+# Testing framework
+pytest>=7.0.0
