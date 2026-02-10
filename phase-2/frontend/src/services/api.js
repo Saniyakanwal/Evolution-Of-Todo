@@ -1,5 +1,10 @@
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL || 'http://127.0.0.1:8000/api/v1';
+// Ensure API_BASE_URL doesn't end with a slash to prevent double slashes in URLs
+let API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://127.0.0.1:8000/api/v1';
+API_BASE_URL = API_BASE_URL.trim(); // Remove leading/trailing whitespace
+// Remove all trailing slashes
+while (API_BASE_URL.endsWith('/')) {
+  API_BASE_URL = API_BASE_URL.slice(0, -1);
+}
 
 // Memory storage for authentication data
 let authToken = null;

@@ -3,6 +3,7 @@ import { api, clearAuthToken, getUserId } from '../services/api';
 
 // Check authentication status by making a backend API call
 // This function will only return true if the backend confirms the user is authenticated
+
 export const isAuthenticated = async () => {
   try {
     // Get user ID from memory
